@@ -10,12 +10,12 @@ import java.util.Set;
 import static org.junit.Assert.*;
 
 public class CleanUpTest {
-    private int one = 1;
-    private byte two = 2;
-    private long three = 3;
-    private boolean four = true;
-    private char five = 'A';
-    private String six = "fasd";
+    private  int one = 1;
+    private  byte two = 2;
+    private  long three = 3;
+    private  boolean four = true;
+    private  char five = 'A';
+    private  String six = "fasd";
 
     @Test
     public void cleanUpObject() {
@@ -27,7 +27,7 @@ public class CleanUpTest {
         str2.add("five");
         CleanUp cl = new CleanUp();
         try {
-            cl.cleanUpHashMap(this, str1, str2);
+            cl.cleanUpObject(this, str1, str2);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
@@ -49,7 +49,7 @@ public class CleanUpTest {
         str2.add("e");
         CleanUp cl = new CleanUp();
         try {
-            cl.cleanUpHashMap(this, str1, str2);
+            cl.cleanUpObject(this, str1, str2);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
@@ -71,7 +71,7 @@ public class CleanUpTest {
         hashmap.put("six", 6);
         CleanUp cl = new CleanUp();
         try {
-            cl.cleanUpHashMap(hashmap, str1, str2);
+            cl.cleanUpObject(hashmap, str1, str2);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
